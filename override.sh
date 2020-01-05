@@ -4,6 +4,7 @@ files=$(ls /run/secrets/)
 vars=$(set)
 for file in $files; do
     secret=$(tail /run/secrets/$file);
+    echo "echo \"Add ${file} variable\""
     echo "export ${file}=${secret}"
     for var in $vars; do
       IFS='=' read -ra var_dico <<< "$var"
