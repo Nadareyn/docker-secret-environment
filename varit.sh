@@ -7,5 +7,5 @@ then
     apk --no-cache add bash
 fi
 
-eval "$($file_dir/generate_export.sh)"
-eval "$1"
+eval "$($file_dir/generate_exports.sh)"
+eval "$@"
